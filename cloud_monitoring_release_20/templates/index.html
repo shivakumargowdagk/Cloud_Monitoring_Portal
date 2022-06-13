@@ -1,0 +1,13 @@
+{% extends "mytemplate.html"%}
+    {% block cssblock%}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>home page</title>
+    {% endblock %}
+{% block bodycontent%}
+
+    <br><br><br>
+    <h2 class="one"> Welcome to, <br><br>
+        Cloud monitoring Portal </h2> <br><br>
+ <!--   <a href="/login"> <button type="button" value="Login Here">Login</button></a> -->
+
+{% endblock %}

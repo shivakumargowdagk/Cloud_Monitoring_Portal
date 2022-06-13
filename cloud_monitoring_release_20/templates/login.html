@@ -1,0 +1,33 @@
+{% extends "mytemplate.html"%}
+
+    {% block cssblock%}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/loginstyles.css') }}">
+    <title>login</title>
+    {% endblock %}
+
+{% block bodycontent%}
+
+    <br><br>
+    <div class="form">
+        <h1>Login Here</h1><br><br>
+
+
+            <form action="/validate" method="post">
+                <span>User Name:</span>
+
+                <input type="text" name="uname" placeholder="enter user name" required/>
+
+
+            <span>Password:</span>
+
+            <input type="password" name="pw" placeholder="enter password" required>
+
+            <input type="submit" class="submit" value="Click Here To Login">
+            </form>
+
+
+        <a href="/newuser" class="three">New User? Register Here</a>
+
+    </div>
+
+{% endblock %}

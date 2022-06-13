@@ -1,0 +1,14 @@
+{% extends "mytemplate.html"%}
+
+    {% block cssblock%}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/loginstyles.css') }}">
+    <title>login</title>
+    {% endblock %}
+
+{% block bodycontent%}
+<br>
+<br>
+<div class="logout">
+<h2>Logout Successfully <img src="static/images/check-mark.png" height="30" width="30"> </h2>
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "mytemplate.html"%}
+    {% block cssblock%}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/new_instance_styles.css') }}">
+    <title>new instance</title>
+    {% endblock %}
+{% block bodycontent%}
+<br>
+<br>
+    <h2>Add New Instance</h2>
+    <br>
+
+    <div class="form">
+        <form action="/newintancedata" method="post">
+            <div class="left">
+            <span>Instance Name:</span>
+            <input type="text" name="instname" placeholder="enter instance  name" required/>
+
+            <span>DataCenter country:</span>
+            <input type="text" name="country" placeholder="enter dataCenter country" required>
+
+            <span>DataCenter location :</span>
+            <input type="text" name="loc" placeholder="enter datacenter location" required/>
+
+            <span>IP:</span>
+            <input type="number" name="ip" placeholder="enter ip" required/>
+
+            <span>Port:</span>
+            <input type="number" name="port" placeholder="enter port" required/>
+            </div>
+            <div class="right">
+            <span>User:</span>
+            <input type="text" name="user" placeholder="enter user" required>
+
+            <span>Password :</span>
+            <input type="Password" name="passw" placeholder="enter password" required/>
+
+            <span>Service Type:</span>
+            <input type="text" name="servtype" placeholder="enter Service Type" required/>
+
+            <span>Command:</span>
+            <input type="text" name="cmnd" placeholder="enter Command" required/>
+
+            <span>Expected Output:</span>
+            <input type="text" name="expoutput" placeholder="enter expected output" required/>
+
+            <span></span>
+            </div>
+            <input type="submit" class="submit" value="Submit">
+        </form>
+    </div>
+<br>
+<br>
+{% endblock %}

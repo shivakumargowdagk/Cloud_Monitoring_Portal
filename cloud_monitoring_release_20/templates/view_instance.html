@@ -1,0 +1,51 @@
+{% extends "mytemplate.html"%}
+    {% block cssblock%}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/new_instance_styles.css') }}">
+    <title>new instance</title>
+    {% endblock %}
+{% block bodycontent%}
+<br>
+<br>
+    <h2>View Instances</h2>
+    <br>
+<table>
+    <tr>
+        <th>INSTANCE<br>NAME</th>
+        <th>INSTANCE<br>ID</th>
+        <th>DATACENTER<br>COUNTRY</th>
+        <th>DATACENTER<br>LOCTION</th>
+        <th>IP </th>
+        <th>PORT</th>
+        <th>USER</th>
+        <th>PASSWORD</th>
+        <th>SERVICE<br>TYPE</th>
+        <th>COMMAND</th>
+        <th>EXPECTED<br>OUTPUT</th>
+        <th>RECEIVED<br>OUTPUT</th>
+        <th>LOGPATH</th>
+        <th>SERVICES<br>TATUS</th>
+
+    </tr>
+    {% for each_record in my_data : %}
+    <tr>
+        <td>{{each_record[0]}}</td>
+        <td>{{each_record[1]}}</td>
+        <td>{{each_record[2]}}</td>
+        <td>{{each_record[3]}}</td>
+        <td>{{each_record[4]}}</td>
+        <td>{{each_record[5]}}</td>
+        <td>{{each_record[6]}}</td>
+        <td>{{each_record[7]}}</td>
+        <td>{{each_record[8]}}</td>
+        <td>{{each_record[9]}}</td>
+        <td>{{each_record[10]}}</td>
+        <td>{{each_record[11]}}</td>
+         <td>{{each_record[12]}}</td>
+        <td>{{each_record[13]}}</td>
+         <td>{{each_record[14]}}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

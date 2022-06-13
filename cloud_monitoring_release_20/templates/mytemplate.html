@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--      <link rel="stylesheet" href="{{ url_for('static', filename='css/mytemplates_styles.css') }}">-->
+<!--    <title>home page</title>-->
+    {% block cssblock%}
+    {% endblock %}
+
+
+</head>
+<body>
+<div class="header">
+    <nav>
+        <h2>CLOUD MONITORING PORTAL</h2>
+        <ul>
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/new_instance">Add Instance</a></li>
+            <li><a href="/view_instance">View Instance</a></li>
+            <li><a href="/remove">Remove</a></li>
+            <li><a href="/about">about</a></li>
+            {% if session.username : %}
+                <li><a href="/logout">Logout</a></li>
+            {% else : %}
+                <li><a href="/login">Login</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+<section>
+  {% block bodycontent%}
+    {% endblock %}
+</section>
+<div class="footer">
+copyright &copy; 2022, by Cloud monitoring portal
+</div>
+
+</body>
+</html>

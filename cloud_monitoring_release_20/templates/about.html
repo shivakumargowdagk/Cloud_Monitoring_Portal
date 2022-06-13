@@ -1,0 +1,44 @@
+{% extends "mytemplate.html"%}
+
+    {% block cssblock%}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aboutstyles.css') }}">
+    <title>about</title>
+    {% endblock %}
+
+{% block bodycontent%}
+
+<div class="left">
+    <br><br><br>
+  <h2  style="color: #27ae60;margin-left:60px">   Cantact us </h2>
+    <pre style="font-size:17px;">
+
+    Frontend Developer : Shivakumargowda G K
+    Backend Developer  : Shivakumargowda G K
+    Documentation      : Shivakumargowda G K
+    ph. no.            : +91-7338095211
+    Gmail              : shivakumargowdagk15@gmail.com
+    </pre>
+
+</div>
+
+<div class="right">
+    <br>
+    <br>
+    <h2>For more Queries Fill the form</h2>
+    <br>
+        <div class="form">
+        <form action="/feedback" method="post">
+            <span>Your Name:</span>
+            <input type="text" name="uname" placeholder="enter your name" required/>
+
+            <span> Your Email:</span>
+            <input type="email" name="email" placeholder="enter your gmail" required>
+
+            <span>Your Comment</span>
+            <textarea name="mesg" placeholder="enter your Queries here" cols="41" rows="7" ></textarea>
+
+            <input type="submit" class="submit" value="Submit">
+        </form>
+    </div>
+</div>
+{% endblock %}
